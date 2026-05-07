@@ -139,6 +139,8 @@ onMounted(() => {
       <p class="hero__amp">&amp;</p>
       <h1 class="hero__groom">Tarish Ahmed B</h1>
 
+      <p class="hero__groom-parents">Son of Mr. BB Ahmed Kabeer &amp; Mrs. TP Subaida</p>
+
       <p class="hero__scroll-hint" aria-hidden="true">scroll to explore ↓</p>
     </div>
   </section>
@@ -252,6 +254,16 @@ onMounted(() => {
   color: var(--color-gold);
   margin-block: 0.15em;
   letter-spacing: 0.1em;
+}
+
+.hero__groom-parents {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-mauve);
+  opacity: 0.75;
+  margin-top: 0.5rem;
+  letter-spacing: 0.05em;
 }
 
 .hero__scroll-hint {
