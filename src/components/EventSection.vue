@@ -4,7 +4,7 @@ const MAP_SRC =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.5262741224255!2d76.33594327611895!3d10.693830960709647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7dd937e570c05%3A0xaccf35ac19f4a8d!2sJanakiram%20Auditorium!5e0!3m2!1sen!2sin!4v1778172748954!5m2!1sen!2sin'
 
 const details = [
-  { icon: '📅', label: 'Date', value: 'Thursday, 18 June 2026' },
+  { icon: '🗓️', label: 'Date', value: 'Thursday, 18 June 2026' },
   { icon: '🕐', label: 'Time', value: '11:30 AM onwards' },
   { icon: '📍', label: 'Venue', value: 'Janakiram Auditorium\nNear SMTHS School\nChelakkara, Kerala' },
 ]
@@ -26,14 +26,8 @@ const details = [
       </div>
 
       <div class="event__map reveal">
-        <iframe
-          :src="MAP_SRC"
-          class="event__iframe"
-          title="Janakiram Auditorium, Chelakkara, Kerala"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen
-        />
+        <iframe :src="MAP_SRC" class="event__iframe" title="Janakiram Auditorium, Chelakkara, Kerala" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" allowfullscreen />
       </div>
     </div>
   </section>
@@ -62,14 +56,18 @@ const details = [
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .event__card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px -8px color-mix(in srgb, var(--color-mauve) 22%, transparent);
 }
+
 .event__card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 3px;
   background: linear-gradient(90deg, var(--color-mauve), var(--color-gold), var(--color-mauve));
 }
